@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda de Productos</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .producto {
+            margin-bottom: 10px;
+        }
+        .carrito-item {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Tienda de Productos</h1>
+
+    <!-- Formulario para agregar productos -->
+    <div>
+        <h2>Agregar Producto</h2>
+        <input type="text" id="nombre" placeholder="Nombre del producto" required>
+        <input type="number" id="precio" placeholder="Precio" required min="0">
+        <input type="number" id="cantidad" placeholder="Cantidad" required min="1">
+        <button id="agregar">Agregar Producto</button>
+    </div>
+
+    <!-- Mostrar lista de productos -->
+    <div>
+        <h2>Lista de Productos</h2>
+        <div id="lista-productos"></div>
+    </div>
+
+    <!-- Buscar producto -->
+    <div>
+        <h2>Buscar Producto</h2>
+        <input type="text" id="buscar-nombre" placeholder="Nombre del producto">
+        <button id="buscar">Buscar</button>
+        <div id="resultado-busqueda"></div>
+    </div>
+
+    <!-- Filtrar productos por precio -->
+    <div>
+        <h2>Filtrar por Precio</h2>
+        <input type="number" id="min-precio" placeholder="Precio mínimo">
+        <input type="number" id="max-precio" placeholder="Precio máximo">
+        <button id="filtrar">Filtrar</button>
+        <div id="resultado-filtrado"></div>
+    </div>
+
+    <!-- Mostrar carrito de compras -->
+    <div>
+        <h2>Carrito de Compras</h2>
+        <div id="carrito"></div>
+        <h3>Total: $<span id="total-carrito">0.00</span></h3>
+        <button id="comprar">Comprar</button>
+    </div>
+
+    <script src="./js/funciones.js"></script>
+    <script src="./js/main.js"></script>
+</body>
+</html>
+
